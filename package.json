@@ -1,10 +1,19 @@
 {
   "name": "pokemon-lorem-ipsum",
   "displayName": "Pokemon Lorem Ipsum",
-  "description": "Generate Pokemon-themed lorem ipsum text for your projects",
+  "description": "Generate Pokemon themed lorem ipsum placeholder text for your projects",
   "version": "0.0.1",
   "publisher": "RiceKrisBs",
   "license": "MIT",
+  "icon": "images/icon.png",
+  "galleryBanner": {
+    "color": "#00aaff",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/RiceKrisBs/pokemon-lorem-ipsum",
+  "bugs": {
+    "url": "https://github.com/RiceKrisBs/pokemon-lorem-ipsum/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/RiceKrisBs/pokemon-lorem-ipsum"
