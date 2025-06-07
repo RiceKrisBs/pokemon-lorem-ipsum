@@ -1,0 +1,33 @@
+/**
+ * List of Poké Balls for the lorem ipsum generator
+ */
+export const pokeBalls: string[] = [
+  'Beast Ball',
+  'Cherish Ball',
+  'Dive Ball',
+  'Dream Ball',
+  'Dusk Ball',
+  'Fast Ball',
+  'Friend Ball',
+  'Great Ball',
+  'Heal Ball',
+  'Heavy Ball',
+  'Level Ball',
+  'Love Ball',
+  'Lure Ball',
+  'Luxury Ball',
+  'Master Ball',
+  'Moon Ball',
+  'Nest Ball',
+  'Net Ball',
+  'Park Ball',
+  'Poké Ball',
+  'Premier Ball',
+  'Quick Ball',
+  'Repeat Ball',
+  'Safari Ball',
+  'Sport Ball',
+  'Strange Ball',
+  'Timer Ball',
+  'Ultra Ball',
+];
