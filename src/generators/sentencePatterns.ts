@@ -38,6 +38,14 @@ export const sentencePatterns: SentencePattern[] = [
     },
   },
 
+  // Pokemon category
+  {
+    generate: () => {
+      const pokemon = getRandomPokemon();
+      return `${pokemon.name} is a ${pokemon.category}`;
+    },
+  },
+
   // Trainer visiting location
   {
     generate: () => {

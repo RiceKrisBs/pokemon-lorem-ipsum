@@ -6,6 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added
+
+- Add `category` property to `Pokemon`
+- Create new sentence pattern using a Pokemon's category.
+
 ## [0.0.1] - 2025-06-06
 
 ### Added

@@ -11,6 +11,7 @@ export interface PokemonBase {
 }
 
 export interface Pokemon extends PokemonBase {
+  category: string;
   evolvesFrom?: string;
   evolvesInto?: string;
   moves: string[];
@@ -22,6 +23,7 @@ export interface Pokemon extends PokemonBase {
 // Define the Pokémon data structure
 export const pokemon: Record<string, Pokemon> = {
   bulbasaur: {
+    category: 'Seed Pokémon',
     evolvesInto: 'Ivysaur',
     moves: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip', 'PoisonPowder', 'Razor Leaf', 'Growth', 'Sleep Powder', 'SolarBeam'],
     name: 'Bulbasaur',
@@ -30,6 +32,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Grass, PokemonType.Poison],
   },
   ivysaur: {
+    category: 'Seed Pokémon',
     evolvesFrom: 'Bulbasaur',
     evolvesInto: 'Venusaur',
     moves: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip', 'PoisonPowder', 'Razor Leaf', 'Growth', 'Sleep Powder', 'SolarBeam'],
@@ -39,6 +42,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Grass, PokemonType.Poison],
   },
   venusaur: {
+    category: 'Seed Pokémon',
     evolvesFrom: 'Ivysaur',
     moves: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip', 'PoisonPowder', 'Razor Leaf', 'Growth', 'Sleep Powder', 'SolarBeam'],
     name: 'Venusaur',
@@ -47,6 +51,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Grass, PokemonType.Poison],
   },
   charmander: {
+    category: 'Lizard Pokémon',
     evolvesInto: 'Charmeleon',
     moves: ['Scratch', 'Growl', 'Ember', 'Leer', 'Rage', 'Slash', 'Flamethrower', 'Fire Spin'],
     name: 'Charmander',
@@ -55,6 +60,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Fire],
   },
   charmeleon: {
+    category: 'Flame Pokémon',
     evolvesFrom: 'Charmander',
     evolvesInto: 'Charizard',
     moves: ['Scratch', 'Growl', 'Ember', 'Leer', 'Rage', 'Slash', 'Flamethrower', 'Fire Spin'],
@@ -64,6 +70,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Fire],
   },
   charizard: {
+    category: 'Flame Pokémon',
     evolvesFrom: 'Charmeleon',
     moves: ['Scratch', 'Growl', 'Ember', 'Leer', 'Rage', 'Slash', 'Flamethrower', 'Fire Spin'],
     name: 'Charizard',
@@ -72,6 +79,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Fire, PokemonType.Flying],
   },
   squirtle: {
+    category: 'Tiny Turtle Pokémon',
     evolvesInto: 'Wartortle',
     moves: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun', 'Bite', 'Withdraw', 'Skull Bash', 'Hydro Pump'],
     name: 'Squirtle',
@@ -80,6 +88,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Water],
   },
   wartortle: {
+    category: 'Turtle Pokémon',
     evolvesFrom: 'Squirtle',
     evolvesInto: 'Blastoise',
     moves: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun', 'Bite', 'Withdraw', 'Skull Bash', 'Hydro Pump'],
@@ -89,6 +98,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Water],
   },
   blastoise: {
+    category: 'Shellfish Pokémon',
     evolvesFrom: 'Wartortle',
     moves: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun', 'Bite', 'Withdraw', 'Skull Bash', 'Hydro Pump'],
     name: 'Blastoise',
@@ -97,6 +107,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Water],
   },
   caterpie: {
+    category: 'Worm Pokémon',
     evolvesInto: 'Metapod',
     moves: ['Tackle', 'String Shot'],
     name: 'Caterpie',
@@ -105,6 +116,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Bug],
   },
   metapod: {
+    category: 'Cocoon Pokémon',
     evolvesFrom: 'Caterpie',
     evolvesInto: 'Butterfree',
     moves: ['Harden'],
@@ -114,6 +126,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Bug],
   },
   butterfree: {
+    category: 'Butterfly Pokémon',
     evolvesFrom: 'Metapod',
     moves: ['Confusion', 'PoisonPowder', 'Stun Spore', 'Sleep Powder', 'Supersonic', 'Whirlwind', 'Gust', 'Psybeam'],
     name: 'Butterfree',
@@ -122,6 +135,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Bug, PokemonType.Flying],
   },
   weedle: {
+    category: 'Hairy Bug Pokémon',
     evolvesInto: 'Kakuna',
     moves: ['Poison Sting', 'String Shot'],
     name: 'Weedle',
@@ -130,6 +144,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Bug, PokemonType.Poison],
   },
   kakuna: {
+    category: 'Cocoon Pokémon',
     evolvesFrom: 'Weedle',
     evolvesInto: 'Beedrill',
     moves: ['Harden'],
@@ -139,6 +154,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Bug, PokemonType.Poison],
   },
   beedrill: {
+    category: 'Poison Bee Pokémon',
     evolvesFrom: 'Kakuna',
     moves: ['Fury Attack', 'Focus Energy', 'Twineedle', 'Rage', 'Pin Missile', 'Agility'],
     name: 'Beedrill',
@@ -147,6 +163,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Bug, PokemonType.Poison],
   },
   pidgey: {
+    category: 'Tiny Bird Pokémon',
     evolvesInto: 'Pidgeotto',
     moves: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind', 'Wing Attack', 'Agility', 'Mirror Move'],
     name: 'Pidgey',
@@ -155,6 +172,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Flying, PokemonType.Normal],
   },
   pidgeotto: {
+    category: 'Bird Pokémon',
     evolvesFrom: 'Pidgey',
     evolvesInto: 'Pidgeot',
     moves: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind', 'Wing Attack', 'Agility', 'Mirror Move'],
@@ -164,6 +182,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Flying, PokemonType.Normal],
   },
   pidgeot: {
+    category: 'Bird Pokémon',
     evolvesFrom: 'Pidgeotto',
     moves: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind', 'Wing Attack', 'Agility', 'Mirror Move'],
     name: 'Pidgeot',
@@ -172,6 +191,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Flying, PokemonType.Normal],
   },
   rattata: {
+    category: 'Mouse Pokémon',
     evolvesInto: 'Raticate',
     moves: ['Tackle', 'Tail Whip', 'Quick Attack', 'Hyper Fang', 'Focus Energy', 'Super Fang'],
     name: 'Rattata',
@@ -180,6 +200,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Normal],
   },
   raticate: {
+    category: 'Mouse Pokémon',
     evolvesFrom: 'Rattata',
     moves: ['Tackle', 'Tail Whip', 'Quick Attack', 'Hyper Fang', 'Focus Energy', 'Super Fang'],
     name: 'Raticate',
@@ -188,6 +209,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Normal],
   },
   spearow: {
+    category: 'Tiny Bird Pokémon',
     evolvesInto: 'Fearow',
     moves: ['Peck', 'Growl', 'Leer', 'Fury Attack', 'Mirror Move', 'Drill Peck', 'Agility'],
     name: 'Spearow',
@@ -196,6 +218,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Normal, PokemonType.Flying],
   },
   fearow: {
+    category: 'Beak Pokémon',
     evolvesFrom: 'Spearow',
     moves: ['Peck', 'Growl', 'Leer', 'Fury Attack', 'Mirror Move', 'Drill Peck', 'Agility'],
     name: 'Fearow',
@@ -204,6 +227,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Normal, PokemonType.Flying],
   },
   ekans: {
+    category: 'Snake Pokémon',
     evolvesInto: 'Arbok',
     moves: ['Wrap', 'Leer', 'Poison Sting', 'Bite', 'Glare', 'Screech', 'Acid'],
     name: 'Ekans',
@@ -212,6 +236,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison],
   },
   arbok: {
+    category: 'Cobra Pokémon',
     evolvesFrom: 'Ekans',
     moves: ['Wrap', 'Leer', 'Poison Sting', 'Bite', 'Glare', 'Screech', 'Acid'],
     name: 'Arbok',
@@ -220,6 +245,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison],
   },
   pikachu: {
+    category: 'Mouse Pokémon',
     evolvesFrom: 'Pichu',
     evolvesInto: 'Raichu',
     moves: ['ThunderShock', 'Growl', 'Tail Whip', 'Thunder Wave', 'Quick Attack', 'Double Team', 'Slam', 'Thunderbolt', 'Agility', 'Thunder', 'Light Screen', 'Swift'],
@@ -229,6 +255,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Electric],
   },
   raichu: {
+    category: 'Mouse Pokémon',
     evolvesFrom: 'Pikachu',
     moves: ['ThunderShock', 'Growl', 'Tail Whip', 'Thunder Wave', 'Quick Attack', 'Double Team', 'Slam', 'Thunderbolt', 'Agility', 'Thunder', 'Light Screen', 'Swift'],
     name: 'Raichu',
@@ -237,6 +264,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Electric],
   },
   sandshrew: {
+    category: 'Mouse Pokémon',
     evolvesInto: 'Sandslash',
     moves: ['Scratch', 'Sand-Attack', 'Slash', 'Poison Sting', 'Swift', 'Fury Swipes'],
     name: 'Sandshrew',
@@ -245,6 +273,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Ground],
   },
   sandslash: {
+    category: 'Mouse Pokémon',
     evolvesFrom: 'Sandshrew',
     moves: ['Scratch', 'Sand-Attack', 'Slash', 'Poison Sting', 'Swift', 'Fury Swipes'],
     name: 'Sandslash',
@@ -253,6 +282,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Ground],
   },
   nidoranFemale: {
+    category: 'Poison Pin Pokémon',
     evolvesInto: 'Nidorina',
     moves: ['Growl', 'Tackle', 'Scratch', 'Double Kick', 'Poison Sting', 'Tail Whip', 'Bite', 'Fury Swipes'],
     name: 'Nidoran♀',
@@ -261,6 +291,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison],
   },
   nidorina: {
+    category: 'Poison Pin Pokémon',
     evolvesFrom: 'Nidoran♀',
     evolvesInto: 'Nidoqueen',
     moves: ['Growl', 'Tackle', 'Scratch', 'Double Kick', 'Poison Sting', 'Tail Whip', 'Bite', 'Fury Swipes'],
@@ -270,6 +301,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison],
   },
   nidoqueen: {
+    category: 'Drill Pokémon',
     evolvesFrom: 'Nidorina',
     moves: ['Tackle', 'Scratch', 'Tail Whip', 'Body Slam', 'Double Kick', 'Poison Sting'],
     name: 'Nidoqueen',
@@ -278,6 +310,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison, PokemonType.Ground],
   },
   nidoranMale: {
+    category: 'Poison Pin Pokémon',
     evolvesInto: 'Nidorino',
     moves: ['Leer', 'Tackle', 'Horn Attack', 'Double Kick', 'Poison Sting', 'Focus Energy', 'Fury Attack', 'Horn Drill'],
     name: 'Nidoran♂',
@@ -286,6 +319,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison],
   },
   nidorino: {
+    category: 'Poison Pin Pokémon',
     evolvesFrom: 'Nidoran♂',
     evolvesInto: 'Nidoking',
     moves: ['Leer', 'Tackle', 'Horn Attack', 'Double Kick', 'Poison Sting', 'Focus Energy', 'Fury Attack', 'Horn Drill'],
@@ -295,6 +329,7 @@ export const pokemon: Record<string, Pokemon> = {
     types: [PokemonType.Poison],
   },
   nidoking: {
+    category: 'Drill Pokémon',
     evolvesFrom: 'Nidorino',
     moves: ['Tackle', 'Horn Attack', 'Poison Sting', 'Thrash', 'Double Kick'],
     name: 'Nidoking',
