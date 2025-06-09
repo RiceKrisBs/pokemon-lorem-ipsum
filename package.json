@@ -2,7 +2,7 @@
   "name": "pokemon-lorem-ipsum",
   "displayName": "Pokemon Lorem Ipsum",
   "description": "Generate Pokemon themed lorem ipsum placeholder text for your projects",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "ricekrisbs",
   "license": "MIT",
   "icon": "images/icon.png",
