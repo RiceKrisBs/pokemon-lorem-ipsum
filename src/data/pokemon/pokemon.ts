@@ -13,7 +13,7 @@ export interface PokemonBase {
 export interface Pokemon extends PokemonBase {
   category: string;
   evolvesFrom?: string;
-  evolvesInto?: string;
+  evolvesInto: string[];
   moves: string[];
   number: number;
   pokedexEntry: string;
@@ -24,7 +24,7 @@ export interface Pokemon extends PokemonBase {
 export const pokemon: Record<string, Pokemon> = {
   bulbasaur: {
     category: 'Seed Pokémon',
-    evolvesInto: 'Ivysaur',
+    evolvesInto: ['Ivysaur'],
     moves: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip', 'PoisonPowder', 'Razor Leaf', 'Growth', 'Sleep Powder', 'SolarBeam'],
     name: 'Bulbasaur',
     number: 1,
@@ -34,7 +34,7 @@ export const pokemon: Record<string, Pokemon> = {
   ivysaur: {
     category: 'Seed Pokémon',
     evolvesFrom: 'Bulbasaur',
-    evolvesInto: 'Venusaur',
+    evolvesInto: ['Venusaur'],
     moves: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip', 'PoisonPowder', 'Razor Leaf', 'Growth', 'Sleep Powder', 'SolarBeam'],
     name: 'Ivysaur',
     number: 2,
@@ -44,6 +44,7 @@ export const pokemon: Record<string, Pokemon> = {
   venusaur: {
     category: 'Seed Pokémon',
     evolvesFrom: 'Ivysaur',
+    evolvesInto: [],
     moves: ['Tackle', 'Growl', 'Leech Seed', 'Vine Whip', 'PoisonPowder', 'Razor Leaf', 'Growth', 'Sleep Powder', 'SolarBeam'],
     name: 'Venusaur',
     number: 3,
@@ -52,7 +53,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   charmander: {
     category: 'Lizard Pokémon',
-    evolvesInto: 'Charmeleon',
+    evolvesInto: ['Charmeleon'],
     moves: ['Scratch', 'Growl', 'Ember', 'Leer', 'Rage', 'Slash', 'Flamethrower', 'Fire Spin'],
     name: 'Charmander',
     number: 4,
@@ -62,7 +63,7 @@ export const pokemon: Record<string, Pokemon> = {
   charmeleon: {
     category: 'Flame Pokémon',
     evolvesFrom: 'Charmander',
-    evolvesInto: 'Charizard',
+    evolvesInto: ['Charizard'],
     moves: ['Scratch', 'Growl', 'Ember', 'Leer', 'Rage', 'Slash', 'Flamethrower', 'Fire Spin'],
     name: 'Charmeleon',
     number: 5,
@@ -72,6 +73,7 @@ export const pokemon: Record<string, Pokemon> = {
   charizard: {
     category: 'Flame Pokémon',
     evolvesFrom: 'Charmeleon',
+    evolvesInto: [],
     moves: ['Scratch', 'Growl', 'Ember', 'Leer', 'Rage', 'Slash', 'Flamethrower', 'Fire Spin'],
     name: 'Charizard',
     number: 6,
@@ -80,7 +82,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   squirtle: {
     category: 'Tiny Turtle Pokémon',
-    evolvesInto: 'Wartortle',
+    evolvesInto: ['Wartortle'],
     moves: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun', 'Bite', 'Withdraw', 'Skull Bash', 'Hydro Pump'],
     name: 'Squirtle',
     number: 7,
@@ -90,7 +92,7 @@ export const pokemon: Record<string, Pokemon> = {
   wartortle: {
     category: 'Turtle Pokémon',
     evolvesFrom: 'Squirtle',
-    evolvesInto: 'Blastoise',
+    evolvesInto: ['Blastoise'],
     moves: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun', 'Bite', 'Withdraw', 'Skull Bash', 'Hydro Pump'],
     name: 'Wartortle',
     number: 8,
@@ -100,6 +102,7 @@ export const pokemon: Record<string, Pokemon> = {
   blastoise: {
     category: 'Shellfish Pokémon',
     evolvesFrom: 'Wartortle',
+    evolvesInto: [],
     moves: ['Tackle', 'Tail Whip', 'Bubble', 'Water Gun', 'Bite', 'Withdraw', 'Skull Bash', 'Hydro Pump'],
     name: 'Blastoise',
     number: 9,
@@ -108,7 +111,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   caterpie: {
     category: 'Worm Pokémon',
-    evolvesInto: 'Metapod',
+    evolvesInto: ['Metapod'],
     moves: ['Tackle', 'String Shot'],
     name: 'Caterpie',
     number: 10,
@@ -118,7 +121,7 @@ export const pokemon: Record<string, Pokemon> = {
   metapod: {
     category: 'Cocoon Pokémon',
     evolvesFrom: 'Caterpie',
-    evolvesInto: 'Butterfree',
+    evolvesInto: ['Butterfree'],
     moves: ['Harden'],
     name: 'Metapod',
     number: 11,
@@ -128,6 +131,7 @@ export const pokemon: Record<string, Pokemon> = {
   butterfree: {
     category: 'Butterfly Pokémon',
     evolvesFrom: 'Metapod',
+    evolvesInto: [],
     moves: ['Confusion', 'PoisonPowder', 'Stun Spore', 'Sleep Powder', 'Supersonic', 'Whirlwind', 'Gust', 'Psybeam'],
     name: 'Butterfree',
     number: 12,
@@ -136,7 +140,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   weedle: {
     category: 'Hairy Bug Pokémon',
-    evolvesInto: 'Kakuna',
+    evolvesInto: ['Kakuna'],
     moves: ['Poison Sting', 'String Shot'],
     name: 'Weedle',
     number: 13,
@@ -146,7 +150,7 @@ export const pokemon: Record<string, Pokemon> = {
   kakuna: {
     category: 'Cocoon Pokémon',
     evolvesFrom: 'Weedle',
-    evolvesInto: 'Beedrill',
+    evolvesInto: ['Beedrill'],
     moves: ['Harden'],
     name: 'Kakuna',
     number: 14,
@@ -156,6 +160,7 @@ export const pokemon: Record<string, Pokemon> = {
   beedrill: {
     category: 'Poison Bee Pokémon',
     evolvesFrom: 'Kakuna',
+    evolvesInto: [],
     moves: ['Fury Attack', 'Focus Energy', 'Twineedle', 'Rage', 'Pin Missile', 'Agility'],
     name: 'Beedrill',
     number: 15,
@@ -164,7 +169,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   pidgey: {
     category: 'Tiny Bird Pokémon',
-    evolvesInto: 'Pidgeotto',
+    evolvesInto: ['Pidgeotto'],
     moves: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind', 'Wing Attack', 'Agility', 'Mirror Move'],
     name: 'Pidgey',
     number: 16,
@@ -174,7 +179,7 @@ export const pokemon: Record<string, Pokemon> = {
   pidgeotto: {
     category: 'Bird Pokémon',
     evolvesFrom: 'Pidgey',
-    evolvesInto: 'Pidgeot',
+    evolvesInto: ['Pidgeot'],
     moves: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind', 'Wing Attack', 'Agility', 'Mirror Move'],
     name: 'Pidgeotto',
     number: 17,
@@ -184,6 +189,7 @@ export const pokemon: Record<string, Pokemon> = {
   pidgeot: {
     category: 'Bird Pokémon',
     evolvesFrom: 'Pidgeotto',
+    evolvesInto: [],
     moves: ['Gust', 'Sand-Attack', 'Quick Attack', 'Whirlwind', 'Wing Attack', 'Agility', 'Mirror Move'],
     name: 'Pidgeot',
     number: 18,
@@ -192,7 +198,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   rattata: {
     category: 'Mouse Pokémon',
-    evolvesInto: 'Raticate',
+    evolvesInto: ['Raticate'],
     moves: ['Tackle', 'Tail Whip', 'Quick Attack', 'Hyper Fang', 'Focus Energy', 'Super Fang'],
     name: 'Rattata',
     number: 19,
@@ -202,6 +208,7 @@ export const pokemon: Record<string, Pokemon> = {
   raticate: {
     category: 'Mouse Pokémon',
     evolvesFrom: 'Rattata',
+    evolvesInto: [],
     moves: ['Tackle', 'Tail Whip', 'Quick Attack', 'Hyper Fang', 'Focus Energy', 'Super Fang'],
     name: 'Raticate',
     number: 20,
@@ -210,7 +217,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   spearow: {
     category: 'Tiny Bird Pokémon',
-    evolvesInto: 'Fearow',
+    evolvesInto: ['Fearow'],
     moves: ['Peck', 'Growl', 'Leer', 'Fury Attack', 'Mirror Move', 'Drill Peck', 'Agility'],
     name: 'Spearow',
     number: 21,
@@ -220,6 +227,7 @@ export const pokemon: Record<string, Pokemon> = {
   fearow: {
     category: 'Beak Pokémon',
     evolvesFrom: 'Spearow',
+    evolvesInto: [],
     moves: ['Peck', 'Growl', 'Leer', 'Fury Attack', 'Mirror Move', 'Drill Peck', 'Agility'],
     name: 'Fearow',
     number: 22,
@@ -228,7 +236,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   ekans: {
     category: 'Snake Pokémon',
-    evolvesInto: 'Arbok',
+    evolvesInto: ['Arbok'],
     moves: ['Wrap', 'Leer', 'Poison Sting', 'Bite', 'Glare', 'Screech', 'Acid'],
     name: 'Ekans',
     number: 23,
@@ -238,6 +246,7 @@ export const pokemon: Record<string, Pokemon> = {
   arbok: {
     category: 'Cobra Pokémon',
     evolvesFrom: 'Ekans',
+    evolvesInto: [],
     moves: ['Wrap', 'Leer', 'Poison Sting', 'Bite', 'Glare', 'Screech', 'Acid'],
     name: 'Arbok',
     number: 24,
@@ -247,7 +256,7 @@ export const pokemon: Record<string, Pokemon> = {
   pikachu: {
     category: 'Mouse Pokémon',
     evolvesFrom: 'Pichu',
-    evolvesInto: 'Raichu',
+    evolvesInto: ['Raichu'],
     moves: ['ThunderShock', 'Growl', 'Tail Whip', 'Thunder Wave', 'Quick Attack', 'Double Team', 'Slam', 'Thunderbolt', 'Agility', 'Thunder', 'Light Screen', 'Swift'],
     name: 'Pikachu',
     number: 25,
@@ -257,6 +266,7 @@ export const pokemon: Record<string, Pokemon> = {
   raichu: {
     category: 'Mouse Pokémon',
     evolvesFrom: 'Pikachu',
+    evolvesInto: [],
     moves: ['ThunderShock', 'Growl', 'Tail Whip', 'Thunder Wave', 'Quick Attack', 'Double Team', 'Slam', 'Thunderbolt', 'Agility', 'Thunder', 'Light Screen', 'Swift'],
     name: 'Raichu',
     number: 26,
@@ -265,7 +275,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   sandshrew: {
     category: 'Mouse Pokémon',
-    evolvesInto: 'Sandslash',
+    evolvesInto: ['Sandslash'],
     moves: ['Scratch', 'Sand-Attack', 'Slash', 'Poison Sting', 'Swift', 'Fury Swipes'],
     name: 'Sandshrew',
     number: 27,
@@ -275,6 +285,7 @@ export const pokemon: Record<string, Pokemon> = {
   sandslash: {
     category: 'Mouse Pokémon',
     evolvesFrom: 'Sandshrew',
+    evolvesInto: [],
     moves: ['Scratch', 'Sand-Attack', 'Slash', 'Poison Sting', 'Swift', 'Fury Swipes'],
     name: 'Sandslash',
     number: 28,
@@ -283,7 +294,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   nidoranFemale: {
     category: 'Poison Pin Pokémon',
-    evolvesInto: 'Nidorina',
+    evolvesInto: ['Nidorina'],
     moves: ['Growl', 'Tackle', 'Scratch', 'Double Kick', 'Poison Sting', 'Tail Whip', 'Bite', 'Fury Swipes'],
     name: 'Nidoran♀',
     number: 29,
@@ -293,7 +304,7 @@ export const pokemon: Record<string, Pokemon> = {
   nidorina: {
     category: 'Poison Pin Pokémon',
     evolvesFrom: 'Nidoran♀',
-    evolvesInto: 'Nidoqueen',
+    evolvesInto: ['Nidoqueen'],
     moves: ['Growl', 'Tackle', 'Scratch', 'Double Kick', 'Poison Sting', 'Tail Whip', 'Bite', 'Fury Swipes'],
     name: 'Nidorina',
     number: 30,
@@ -303,6 +314,7 @@ export const pokemon: Record<string, Pokemon> = {
   nidoqueen: {
     category: 'Drill Pokémon',
     evolvesFrom: 'Nidorina',
+    evolvesInto: [],
     moves: ['Tackle', 'Scratch', 'Tail Whip', 'Body Slam', 'Double Kick', 'Poison Sting'],
     name: 'Nidoqueen',
     number: 31,
@@ -311,7 +323,7 @@ export const pokemon: Record<string, Pokemon> = {
   },
   nidoranMale: {
     category: 'Poison Pin Pokémon',
-    evolvesInto: 'Nidorino',
+    evolvesInto: ['Nidorino'],
     moves: ['Leer', 'Tackle', 'Horn Attack', 'Double Kick', 'Poison Sting', 'Focus Energy', 'Fury Attack', 'Horn Drill'],
     name: 'Nidoran♂',
     number: 32,
@@ -321,7 +333,7 @@ export const pokemon: Record<string, Pokemon> = {
   nidorino: {
     category: 'Poison Pin Pokémon',
     evolvesFrom: 'Nidoran♂',
-    evolvesInto: 'Nidoking',
+    evolvesInto: ['Nidoking'],
     moves: ['Leer', 'Tackle', 'Horn Attack', 'Double Kick', 'Poison Sting', 'Focus Energy', 'Fury Attack', 'Horn Drill'],
     name: 'Nidorino',
     number: 33,
@@ -331,6 +343,7 @@ export const pokemon: Record<string, Pokemon> = {
   nidoking: {
     category: 'Drill Pokémon',
     evolvesFrom: 'Nidorino',
+    evolvesInto: [],
     moves: ['Tackle', 'Horn Attack', 'Poison Sting', 'Thrash', 'Double Kick'],
     name: 'Nidoking',
     number: 34,

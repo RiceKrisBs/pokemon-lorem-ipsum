@@ -78,11 +78,10 @@ suite('Pokemon Utils Test Suite', () => {
       const basePokemon = Object.values(pokemon).find(p => p.name === result.base);
       assert.ok(basePokemon, `Base Pokémon ${result.base} should exist in the source data`);
 
-      // Verify that the evolution matches the base Pokémon's evolvesInto property
-      assert.strictEqual(
-				basePokemon!.evolvesInto,
-				result.evolution,
-				`Evolution ${result.evolution} should match ${result.base}'s evolvesInto property`,
+      // Verify that the evolution is included in the base Pokémon's evolvesInto array
+      assert.ok(
+        basePokemon!.evolvesInto.includes(result.evolution),
+        `Evolution ${result.evolution} should be included in ${result.base}'s evolvesInto array: ${basePokemon!.evolvesInto.join(', ')}`,
       );
     });
 
@@ -98,7 +97,7 @@ suite('Pokemon Utils Test Suite', () => {
       const uniqueResults = new Set(results);
 
       // Count how many Pokémon have evolutions
-      const evolvingPokemonCount = Object.values(pokemon).filter(p => p.evolvesInto).length;
+      const evolvingPokemonCount = Object.values(pokemon).filter(p => p.evolvesInto.length > 0).length;
 
       // If there are multiple evolving Pokémon, we should get different results
       if (evolvingPokemonCount > 1) {

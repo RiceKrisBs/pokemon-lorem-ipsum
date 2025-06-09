@@ -32,7 +32,7 @@ export function getRandomMove(pokemon: Pokemon): string {
 export function getRandomEvolutionPair(): { base: string; evolution: string } {
   // Filter Pokémon that have an evolution
   const evolvingPokemonKeys = Object.keys(pokemon).filter(key =>
-    pokemon[key].evolvesInto !== undefined,
+    pokemon[key].evolvesInto.length > 0,
   );
 
   // If no evolving Pokémon found (shouldn't happen with our data), return a fallback
@@ -44,8 +44,8 @@ export function getRandomEvolutionPair(): { base: string; evolution: string } {
   const randomKey = evolvingPokemonKeys[Math.floor(Math.random() * evolvingPokemonKeys.length)];
   const basePokemon = pokemon[randomKey];
 
-  // Find its evolution
-  const evolutionName = basePokemon.evolvesInto;
+  // Find a random evolution
+  const evolutionName = basePokemon.evolvesInto[Math.floor(Math.random() * basePokemon.evolvesInto.length)];
 
   // Return the pair
   return {

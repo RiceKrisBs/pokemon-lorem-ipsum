@@ -11,6 +11,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add `category` property to `Pokemon`
 - Create new sentence pattern using a Pokemon's category.
 
+### Changed
+
+- Support branched evolution by changing `Pokemon.evolvesInto` from an optional string to a required string array
+- Updated pokemon data to include an `evolvesInto` array (empty array for those that don't evolve)
+
 ## [0.0.1] - 2025-06-06
 
 ### Added
