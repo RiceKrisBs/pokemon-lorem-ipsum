@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Add `category` property to `Pokemon`
 - Create new sentence pattern using a Pokemon's category.
+- Add pokemon data (pokedex numbers 35 - 45)
 
 ### Changed
 
