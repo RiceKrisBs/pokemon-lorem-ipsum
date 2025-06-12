@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.0.3] - 2025-06-12
+
+### Added
+
+- Add pokemon data (pokedex numbers 46 - 89)
+
 ## [0.0.2] - 2025-06-09
 
 ### Added
