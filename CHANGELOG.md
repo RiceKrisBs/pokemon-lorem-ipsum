@@ -9,6 +9,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 ### Added
 
 - Add pokemon data (pokedex numbers 90 - 110)
+- Add script command to help with packaging
 - Add linting and test CI jobs in GitHub
 - Add badges to README:
   - CI status

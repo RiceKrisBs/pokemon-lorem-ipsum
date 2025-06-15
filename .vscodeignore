@@ -17,3 +17,4 @@ eslint.config.mjs
 **/*.ts
 **/.vscode-test.*
 package-lock.json
+releases/**
