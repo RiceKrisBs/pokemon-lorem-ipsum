@@ -1,5 +1,10 @@
 # Pokémon Lorem Ipsum
 
+[![CI](https://github.com/RiceKrisBs/pokemon-lorem-ipsum/actions/workflows/ci.yml/badge.svg)](https://github.com/RiceKrisBs/pokemon-lorem-ipsum/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![VS Code Marketplace](https://img.shields.io/visual-studio-marketplace/v/ricekrisbs.pokemon-lorem-ipsum)](https://marketplace.visualstudio.com/items?itemName=ricekrisbs.pokemon-lorem-ipsum)
+[![Open VSX Registry](https://img.shields.io/open-vsx/v/ricekrisbs/pokemon-lorem-ipsum)](https://open-vsx.org/extension/ricekrisbs/pokemon-lorem-ipsum)
+
 A Visual Studio Code extension that generates Pokémon-themed lorem ipsum text. Perfect for placeholder text with a fun twist!
 
 ## Features

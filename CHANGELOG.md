@@ -10,6 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Add pokemon data (pokedex numbers 90 - 110)
 - Add linting and test CI jobs in GitHub
+- Add badges to README:
+  - CI status
+  - License
+  - VS Code Marketplace
+  - Open VSX Registry
 
 ## [0.0.3] - 2025-06-12
 
