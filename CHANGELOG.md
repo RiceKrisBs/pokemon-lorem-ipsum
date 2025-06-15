@@ -6,9 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [0.1.0] - 2025-06-15
+
 ### Added
 
-- Add pokemon data (pokedex numbers 90 - 120)
+- Add pokemon data (pokedex numbers 90 - 151)
 - Add script command to help with packaging
 - Add linting and test CI jobs in GitHub
 - Add GitHub issue templates

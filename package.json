@@ -2,7 +2,7 @@
   "name": "pokemon-lorem-ipsum",
   "displayName": "Pokemon Lorem Ipsum",
   "description": "Generate Pokemon themed lorem ipsum placeholder text for your projects",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "publisher": "ricekrisbs",
   "license": "MIT",
   "icon": "images/icon.png",
@@ -57,7 +57,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "vscode-test",
-    "package-extension": "mkdir -p releases && vsce package --out releases"
+    "package-extension": "vsce package --out releases"
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
