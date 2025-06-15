@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Add pokemon data (pokedex numbers 90 - 120)
 - Add script command to help with packaging
 - Add linting and test CI jobs in GitHub
+- Add GitHub issue templates
 - Add badges to README:
   - CI status
   - License
